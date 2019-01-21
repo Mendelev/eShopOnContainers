@@ -80,7 +80,7 @@ done
 echo "#################### NGINX ####################"
 externalDns=$(kubectl get svc ingress-nginx -n ingress-nginx -o=jsonpath="{.status.loadBalancer.ingress[0].ip}")
 if [[!$externalDns]]; then
-     echo "Não possui nginx-ingress rodando, aplicando yaml...
+     echo "Não possui nginx-ingress rodando, aplicando yaml..."
      kubectl apply -f nginx-ingress/mandatory.yaml
      kubectl apply -f nginx-ingress/service-nodeport.yaml
      echo "Verifique se o nginx ingress está gerando ip e então rode de novo o deploy.sh"
