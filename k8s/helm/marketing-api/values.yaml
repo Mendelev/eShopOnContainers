@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /marketing-api
 
 image:
-  repository: eshop/marketing.api
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: marketing.api
   pullPolicy: IfNotPresent
 
 service:

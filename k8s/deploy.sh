@@ -78,14 +78,16 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "#################### NGINX ####################"
-externalDns=$(kubectl get svc ingress-nginx -n ingress-nginx -o=jsonpath="{.status.loadBalancer.ingress[0].ip}")
-if [[!$externalDns]]; then
-     echo "Não possui nginx-ingress rodando, aplicando yaml..."
-     kubectl apply -f nginx-ingress/mandatory.yaml
-     kubectl apply -f nginx-ingress/service-nodeport.yaml
-     echo "Verifique se o nginx ingress está gerando ip e então rode de novo o deploy.sh"
-     exit 3
-fi
+#externalDns=$(kubectl get svc ingress-nginx -n ingress-nginx -o=jsonpath="{.status.loadBalancer.ingress[0].ip}")
+externalDns=localhost
+#if [[!$externalDns]]; then
+#     echo "Não possui nginx-ingress rodando, aplicando yaml..."
+#     kubectl apply -f nginx-ingress/mandatory.yaml
+#     kubectl apply -f nginx-ingress/cloud-generic.yaml
+#     kubectl apply -f metal.yaml
+#     echo "Verifique se o nginx ingress está gerando ip e então rode de novo o deploy.sh"
+#     exit 3
+#fi
 
 if [[ ! $container_registry ]]; then
     echo 'Container registry must be specified (e.g. myregistry.azurecr.io)'
@@ -211,6 +213,7 @@ kubectl set image deployments/basket "basket=$container_registry:basket.api"
 kubectl set image deployments/catalog "catalog=$container_registry:catalog.api"
 kubectl set image deployments/identity "identity=$container_registry:identity.api"
 kubectl set image deployments/ordering "ordering=$container_registry:ordering.api"
+kubectl set image deployments/ordering-backgroundtasks "ordering-backgroundtasks=$container_registry:ordering.backgroundtasks"
 kubectl set image deployments/marketing "marketing=$container_registry:marketing.api"
 kubectl set image deployments/locations "locations=$container_registry:locations.api"
 kubectl set image deployments/payment "payment=$container_registry:payment.api"
@@ -231,6 +234,7 @@ kubectl rollout resume deployments/basket
 kubectl rollout resume deployments/catalog
 kubectl rollout resume deployments/identity
 kubectl rollout resume deployments/ordering
+kubectl rollout resume deployments/ordering-backgroundtasks
 kubectl rollout resume deployments/marketing
 kubectl rollout resume deployments/locations
 kubectl rollout resume deployments/payment

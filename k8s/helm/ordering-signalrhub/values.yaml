@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /ordering-signalrhub
 
 image:
-  repository: eshop/ordering.signalrhub
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: ordering.signalrhub
   pullPolicy: IfNotPresent
 
 service:

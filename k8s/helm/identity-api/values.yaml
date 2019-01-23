@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /identity
 
 image:
-  repository: eshop/identity.api
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: identity.api
   pullPolicy: IfNotPresent
 
 service:

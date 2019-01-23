@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: basket
-        image: eshop/basket.api
+        image: mendelev/eshoponcontainers:basket.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -69,7 +69,7 @@ spec:
     spec:
       containers:
       - name: catalog
-        image: eshop/catalog.api
+        image: mendelev/eshoponcontainers:catalog.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -121,7 +121,7 @@ spec:
     spec:
       containers:
       - name: identity
-        image: eshop/identity.api
+        image: mendelev/eshoponcontainers:identity.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -210,7 +210,7 @@ spec:
     spec:
       containers:
       - name: ordering
-        image: eshop/ordering.api
+        image: mendelev/eshoponcontainers:ordering.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -277,7 +277,7 @@ spec:
     spec:
       containers:
       - name: ordering-backgroundtasks
-        image: eshop/ordering.backgroundtasks
+        image: mendelev/eshoponcontainers:ordering.backgroundtasks
         imagePullPolicy: Always
         env:        
         - name: ConnectionString
@@ -336,7 +336,7 @@ spec:
     spec:
       containers:
       - name: ordering-signalrhub
-        image: eshop/ordering.signalrhub
+        image: mendelev/eshoponcontainers:ordering.signalrhub
         imagePullPolicy: Always
         env:                
         - name: EventBusConnection
@@ -387,7 +387,7 @@ spec:
     spec:
       containers:
       - name: locations
-        image: eshop/locations.api
+        image: mendelev/eshoponcontainers:locations.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -454,7 +454,7 @@ spec:
     spec:
       containers:
       - name: marketing
-        image: eshop/marketing.api
+        image: mendelev/eshoponcontainers:marketing.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -531,7 +531,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: eshop/payment.api
+        image: mendelev/eshoponcontainers:payment.api
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -573,7 +573,7 @@ spec:
     spec:
       containers:
       - name: webmvc
-        image: eshop/webmvc
+        image: mendelev/eshoponcontainers:webmvc
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -677,7 +677,7 @@ spec:
     spec:
       containers:
       - name: webstatus
-        image: eshop/webstatus
+        image: mendelev/eshoponcontainers:webstatus
         imagePullPolicy: Always
         env:
         - name: PATH_BASE
@@ -758,7 +758,7 @@ spec:
     spec:
       containers:
       - name: webspa
-        image: eshop/webspa
+        image: mendelev/eshoponcontainers:webspa
         imagePullPolicy: Always
         env:
         - name: ASPNETCORE_URLS
@@ -852,7 +852,7 @@ spec:
     spec:
       containers:
       - name: webshoppingagg
-        image: eshop/webshoppingagg
+        image: mendelev/eshoponcontainers:webshoppingagg
         imagePullPolicy: Always
         env:
         - name: ASPNETCORE_URLS
@@ -896,7 +896,7 @@ spec:
     spec:
       containers:
       - name: mobileshoppingagg
-        image: eshop/mobileshoppingagg
+        image: mendelev/eshoponcontainers:mobileshoppingagg
         imagePullPolicy: Always
         env:
         - name: ASPNETCORE_URLS

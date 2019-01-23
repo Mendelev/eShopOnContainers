@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /catalog-api
 
 image:
-  repository: eshop/catalog.api
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: catalog.api
   pullPolicy: IfNotPresent
 
 service:

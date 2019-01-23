@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /ordering-backgroundtasks
 
 image:
-  repository: eshop/ordering.backgroundtasks
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: ordering.backgroundtasks
   pullPolicy: IfNotPresent
 
 service:

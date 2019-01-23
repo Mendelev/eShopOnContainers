@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /mobileshoppingapigw
 
 image:
-  repository: eshop/ocelotapigw
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: ocelotapigw
   pullPolicy: IfNotPresent
 
 service:

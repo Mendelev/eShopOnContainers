@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /mobileshoppingagg
 
 image:
-  repository: eshop/mobileshoppingagg
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: mobileshoppingagg
   pullPolicy: IfNotPresent
 
 service:

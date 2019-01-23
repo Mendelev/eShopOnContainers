@@ -162,6 +162,7 @@ metadata:
 spec:
   ports:
   - port: 80
+#    targetPort: 9003
   selector:
     app: eshop
     component: webmvc

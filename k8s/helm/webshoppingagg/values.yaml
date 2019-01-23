@@ -3,8 +3,8 @@ clusterName: eshop-aks
 pathBase: /webshoppingagg
 
 image:
-  repository: eshop/webshoppingagg
-  tag: latest
+  repository: mendelev/eshoponcontainers
+  tag: webshoppingagg
   pullPolicy: IfNotPresent
 
 service:
